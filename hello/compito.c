@@ -6,11 +6,11 @@ int main() {
 
     // Chiedi all'utente di inserire il proprio nome
     printf("Inserisci il tuo nome: ");
-    scanf("%s", nome);  // Leggi il nome
+    scanf("%s", nome);  
 
     // Chiedi all'utente di inserire il proprio cognome
     printf("Inserisci il tuo cognome: ");
-    scanf("%s", cognome);  // Leggi il cognome
+    scanf("%s", cognome);  
 
     // Stampa un messaggio di benvenuto 
     printf("\nBenvenuto, %s %s!\n", nome, cognome);
