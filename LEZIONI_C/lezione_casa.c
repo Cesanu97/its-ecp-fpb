@@ -5,22 +5,22 @@
 int main()
 
 {
-    // */ /*commento*/
-    // printf("Hello World!!\n\n\n"); 
+    */ /*commento*/
+    printf("Hello World!!\n\n\n"); 
    
-    // // variable of 32 chars
-    // char name [32]; 
+    // variable of 32 chars
+    char name [32]; 
 
-    // //ask for a name
-    // printf("Enter a name: ");
+    //ask for a name
+    printf("Enter a name: ");
 
-    // //read the input of the user
-    // scanf("%s", name);  
+    //read the input of the user
+    scanf("%s", name);  
 
-    // //print a message with the name entered 
-    // printf("\nhello\t %s \n\n\n", name); */
+    //print a message with the name entered 
+    printf("\nhello\t %s \n\n\n", name); */
 
-    // inizializazione float chiamata f
+    inizializazione float chiamata f
     float f = 10.5;
 
     // chiediamo all'utente di inserire numero reale che sovrascrive f inizializzato prima
@@ -41,7 +41,10 @@ int main()
     // calcoliamo area cerchio con la f e il pi_greco
     NEW_LINE;
     f = f * f * PI_GRECO;
-    printf("Area del cerchio è %f", f);
+    printf("Area del cerchio è %f\n", f);
+    
+    
+
 
 
 
