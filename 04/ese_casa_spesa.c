@@ -8,7 +8,9 @@ int spesa;
 // Richiesta giorno sttimana e totale spesa
 printf("Inserisci giorno della settimana in cui fatto spesa: ");
 scanf("%s", giorni);
-printf("inserisci totale spesa")
+printf("inserisci totale spesa in euro: ");
+scanf("%d", &spesa);
+
 
 
 
