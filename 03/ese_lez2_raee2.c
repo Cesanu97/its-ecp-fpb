@@ -24,9 +24,9 @@ int main() {
         scanf("%s", categoria);
 
         // Confronta la categoria inserita
-        if (strcmp(categoria, "R1") == 0 || strcmp(categoria, "R2") == 0 || 
-            strcmp(categoria, "R3") == 0 || strcmp(categoria, "R4") == 0 || 
-            strcmp(categoria, "R5") == 0) {
+        if (strcasecmp(categoria, "R1") == 0 || strcasecmp(categoria, "R2") == 0 || 
+            strcasecmp(categoria, "R3") == 0 || strcasecmp(categoria, "R4") == 0 || 
+            strcasecmp(categoria, "R5") == 0) {
             categoria_valida = 1;  
         } else {
             printf("Categoria non valida. Per favore inserisci una categoria valida (R1 a R5).\n");
@@ -38,15 +38,15 @@ int main() {
     scanf("%lf", &peso);
 
     // Impostare il recupero_percentuale in base alla categoria
-    if (strcmp(categoria, "R1") == 0) {
+    if (strcasecmp(categoria, "R1") == 0) {
         recupero_percentuale = R1;
-    } else if (strcmp(categoria, "R2") == 0) {
+    } else if (strcasecmp(categoria, "R2") == 0) {
         recupero_percentuale = R2;
-    } else if (strcmp(categoria, "R3") == 0) {
+    } else if (strcasecmp(categoria, "R3") == 0) {
         recupero_percentuale = R3;
-    } else if (strcmp(categoria, "R4") == 0) {
+    } else if (strcasecmp(categoria, "R4") == 0) {
         recupero_percentuale = R4;
-    } else if (strcmp(categoria, "R5") == 0) {
+    } else if (strcasecmp(categoria, "R5") == 0) {
         recupero_percentuale = R5;
     }
 
