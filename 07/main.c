@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "string_analysis.h"
-#include "string_analysis.c"
+// #include "string_analysis.c"
 
 int main() {
     char strings[6][50] = {"Anna", "banana", "apple", "A1pha", "racecar", "123"};
