@@ -28,33 +28,49 @@ int main() {
 
         switch (scelta) {
             case 1:  // Addizione
-                printf("Inserisci due numeri: ");
-                scanf("%d %d", &num1, &num2);
+                printf("Inserisci il primo numero: ");
+                scanf("%d", &num1);
+                printf("Inserisci il secondo numero: ");
+                scanf("%d", &num2);
                 printf("%d + %d = %d\n", num1, num2, add(num1, num2));
                 break;
             case 2:  // Sottrazione
-                printf("Inserisci due numeri: ");
-                scanf("%d %d", &num1, &num2);
+                printf("Inserisci il primo numero: ");
+                scanf("%d", &num1);
+                printf("Inserisci il secondo numero: ");
+                scanf("%d", &num2);
                 printf("%d - %d = %d\n", num1, num2, sub(num1, num2));
                 break;
             case 3:  // Moltiplicazione
-                printf("Inserisci due numeri: ");
-                scanf("%d %d", &num1, &num2);
+                printf("Inserisci il primo numero: ");
+                scanf("%d", &num1);
+                printf("Inserisci il secondo numero: ");
+                scanf("%d", &num2);
                 printf("%d * %d = %d\n", num1, num2, mul(num1, num2));
                 break;
             case 4:  // Divisione
-                printf("Inserisci due numeri: ");
-                scanf("%d %d", &num1, &num2);
-                printf("%d / %d = %.2f\n", num1, num2, divi(num1, num2));
+                printf("Inserisci il primo numero: ");
+                scanf("%d", &num1);
+                printf("Inserisci il secondo numero: ");
+                scanf("%d", &num2);
+                if (num2 != 0) {
+                    printf("%d / %d = %.2f\n", num1, num2, divi(num1, num2));
+                } else {
+                    printf("Errore: divisione per zero!\n");
+                }
                 break;
             case 5:  // Modulo
-                printf("Inserisci due numeri: ");
-                scanf("%d %d", &num1, &num2);
+                printf("Inserisci il primo numero: ");
+                scanf("%d", &num1);
+                printf("Inserisci il secondo numero: ");
+                scanf("%d", &num2);
                 printf("%d %% %d = %d\n", num1, num2, mod(num1, num2));
                 break;
             case 6:  // Potenza
-                printf("Inserisci due numeri: ");
-                scanf("%d %d", &num1, &num2);
+                printf("Inserisci la base: ");
+                scanf("%d", &num1);
+                printf("Inserisci l'esponente: ");
+                scanf("%d", &num2);
                 printf("%d ^ %d = %d\n", num1, num2, power(num1, num2));
                 break;
             case 7:  // Test di tutte le funzioni
@@ -71,5 +87,3 @@ int main() {
 
     return 0;
 }
-
-
