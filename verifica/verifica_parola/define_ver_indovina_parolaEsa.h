@@ -4,7 +4,7 @@
 // Definizione della lunghezza massima delle parole
 #define MAX_LENGTH 20
 
-// Definizione dell'array di parole da cui verrà selezionata casualmente una parola
+// Definizione dell'array di parole 
 extern char parola[][MAX_LENGTH];
 
 #endif // DEFINE_H

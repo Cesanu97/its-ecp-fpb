@@ -4,17 +4,41 @@
 #include <string.h>
 #include "define_ver_indovina_parolaEsa.h"
 
-// Inizializzazione dell'array di parole
+// Array di parole
 char parola[][MAX_LENGTH] = {"elephant", "banana", "computer", "galaxy", "puzzle", "giraffe"};
 
 int main() {
     
-    // Inizializzazione del generatore di numeri casuali
+    // Generatore di numeri casuali
     srand(time(NULL));
 
-    // Selezione casuale di una parola
-    int indice_parola = rand() % 6; 
-    char *parola_scelta = parola[indice_parola];
+    // Chiedi all'utente se vuole usare una parola predefinita o inserire una parola personalizzata
+    int scelta;
+    printf("Vuoi usare una parola predefinita o una personalizzata?\n");
+    printf("1. Parola predefinita\n");
+    printf("2. Parola personalizzata\n");
+    printf("Scegli (1 o 2): ");
+    scanf("%d", &scelta);
+    
+    char *parola_scelta;
+    
+    if (scelta == 1) {
+        // Seleziona casualmente una parola
+        int indice_parola = rand() % 6; 
+        parola_scelta = parola[indice_parola];
+    } else if (scelta == 2) {
+        
+        // Permetti all'utente di inserire una parola
+        char parola_personalizzata[MAX_LENGTH];
+        printf("Inserisci la tua parola personalizzata: ");
+        scanf("%s", parola_personalizzata);
+        
+        parola_scelta = parola_personalizzata;
+    } else {
+        printf("Scelta non valida! Usiamo una parola predefinita.\n");
+        int indice_parola = rand() % 6; 
+        parola_scelta = parola[indice_parola];
+    }
 
     // Creazione di una versione nascosta della parola
     int lung_parola = strlen(parola_scelta);
@@ -24,7 +48,7 @@ int main() {
     }
     parola_nascosta[lung_parola] = '\0';  
     
-      // Contatore dei tentativi
+    // Contatore dei tentativi
     int tentativi = 0;  
     
     // Numero di lettere indovinate correttamente
@@ -64,3 +88,4 @@ int main() {
 
     return 0;
 }
+
