@@ -5,6 +5,6 @@
 #define MAX_LENGTH 20
 
 // Definizione dell'array di parole da cui verrà selezionata casualmente una parola
-extern char words[][MAX_LENGTH];
+extern char parola[][MAX_LENGTH];
 
 #endif // DEFINE_H

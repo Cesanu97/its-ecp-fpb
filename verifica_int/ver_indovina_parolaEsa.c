@@ -5,7 +5,7 @@
 #include "define_ver_indovina_parolaEsa.h"
 
 // Inizializzazione dell'array di parole
-char words[][MAX_LENGTH] = {"elephant", "banana", "computer", "galaxy", "puzzle", "giraffe"};
+char parola[][MAX_LENGTH] = {"elephant", "banana", "computer", "galaxy", "puzzle", "giraffe"};
 
 int main() {
     
@@ -13,54 +13,54 @@ int main() {
     srand(time(NULL));
 
     // Selezione casuale di una parola
-    int word_index = rand() % 6; 
-    char *chosen_word = words[word_index];
+    int indice_parola = rand() % 6; 
+    char *parola_scelta = parola[indice_parola];
 
     // Creazione di una versione nascosta della parola
-    int word_length = strlen(chosen_word);
-    char hidden_word[word_length + 1];  
-    for (int i = 0; i < word_length; i++) {
-        hidden_word[i] = '*';
+    int lung_parola = strlen(parola_scelta);
+    char parola_nascosta[lung_parola + 1];  
+    for (int i = 0; i < lung_parola; i++) {
+        parola_nascosta[i] = '*';
     }
-    hidden_word[word_length] = '\0';  
+    parola_nascosta[lung_parola] = '\0';  
     
       // Contatore dei tentativi
-    int attempts = 0;  
+    int tentativi = 0;  
     
     // Numero di lettere indovinate correttamente
-    int correct_guesses = 0;  
+    int tentativi_corretti = 0;  
 
     // Gioco principale
-    while (correct_guesses < word_length) {
-        printf("Parola attuale: %s\n", hidden_word);
+    while (tentativi_corretti < lung_parola) {
+        printf("Parola attuale: %s\n", parola_nascosta);
         printf("Inserisci un carattere: ");
         
-        char guess;
-        scanf(" %c", &guess);  
+        char indovina;
+        scanf(" %c", &indovina);  
 
-        int letter_found = 0;
+        int parole_trovate = 0;
 
         // Controlla se il carattere è presente nella parola
-        for (int i = 0; i < word_length; i++) {
-            if (chosen_word[i] == guess && hidden_word[i] == '*') {
-                hidden_word[i] = guess;  
-                correct_guesses++;
-                letter_found = 1;
+        for (int i = 0; i < lung_parola; i++) {
+            if (parola_scelta[i] == indovina && parola_nascosta[i] == '*') {
+                parola_nascosta[i] = indovina;  
+                tentativi_corretti++;
+                parole_trovate = 1;
             }
         }
 
-        if (letter_found) {
-            printf("Carattere presente!\n");
+        if (parole_trovate) {
+            printf("Carattere presente!\n\n");
         } else {
-            printf("Il carattere '%c' non è presente nella parola.\n", guess);
+            printf("Il carattere '%c' non è presente nella parola.\n\n", indovina);
         }
 
-        attempts++;
+        tentativi++;
     }
 
     // Risultato finale
-    printf("Congratulazioni! Hai indovinato la parola: %s\n", chosen_word);
-    printf("Numero di tentativi: %d\n", attempts);
+    printf("Congratulazioni! Hai indovinato la parola: %s\n", parola_scelta);
+    printf("Numero di tentativi: %d\n", tentativi);
 
     return 0;
 }
