@@ -12,7 +12,7 @@ int main() {
 
     while (!uscita) {
         // Menù iniziale
-        printf("\nMenu:\n");
+        printf("\nMENU:\n");
         printf("1. Addizione (+)\n");
         printf("2. Sottrazione (-)\n");
         printf("3. Moltiplicazione (*)\n");

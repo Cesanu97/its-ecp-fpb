@@ -1,7 +1,7 @@
 #ifndef FUNZIONI_H
 #define FUNZIONI_H
 
-// Dichiarazione delle funzioni
+// Dichiaro le funzioni
 int add(int, int);
 int sub(int, int);
 int mul(int, int);

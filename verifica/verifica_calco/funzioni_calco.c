@@ -21,7 +21,7 @@ int mul(int a, int b) {
 float divi(int a, int b) {
     if (b == 0) {
         printf("Errore: Divisione per zero!\n");
-        return 0; // Gestione della divisione per zero
+        return 0; 
     }
     return (float)a / b;
 }
@@ -30,7 +30,7 @@ float divi(int a, int b) {
 int mod(int a, int b) {
     if (b == 0) {
         printf("Errore: Modulo per zero!\n");
-        return 0; // Gestione del modulo per zero
+        return 0; 
     }
     return a % b;
 }
@@ -39,12 +39,13 @@ int mod(int a, int b) {
 int power(int a, int b) {
     int result = 1;
     for (int i = 0; i < b; i++) {
-        result *= a; // Elevamento a potenza con moltiplicazione
+        result *= a; 
     }
     return result;
 }
 
-// Funzione per testare tutte le operazioni su un array di numeri
+
+// Funzione per testare tutte le operazioni 
 void test_all_operations(int arr[], int size) {
     printf("Test delle operazioni sui numeri {");
     for (int i = 0; i < size; i++) {
@@ -53,16 +54,21 @@ void test_all_operations(int arr[], int size) {
     }
     printf("}:\n");
 
-    for (int i = 0; i < size - 1; i++) {
-        int a = arr[i];
-        int b = arr[i + 1];
-        
-        printf("%d + %d = %d\n", a, b, add(a, b));
-        printf("%d - %d = %d\n", a, b, sub(a, b));
-        printf("%d * %d = %d\n", a, b, mul(a, b));
-        printf("%d / %d = %.2f\n", a, b, divi(a, b));
-        printf("%d %% %d = %d\n", a, b, mod(a, b));
-        printf("%d ^ %d = %d\n", a, b, power(a, b));
-        printf("\n");
+    // Eseguo tutte le operazioni
+    printf("%d + %d = %d\n", arr[0], arr[1], add(arr[0], arr[1]));
+    printf("%d - %d = %d\n", arr[1], arr[2], sub(arr[1], arr[2]));
+    printf("%d * %d = %d\n", arr[2], arr[3], mul(arr[2], arr[3]));
+    if (arr[4] != 0) {
+        printf("%d / %d = %.2f\n", arr[3], arr[4], divi(arr[3], arr[4]));
+    } else {
+        printf("%d / %d = Divisione per zero!\n", arr[3], arr[4]);
     }
+    if (arr[1] != 0) {
+        printf("%d %% %d = %d\n", arr[0], arr[1], mod(arr[0], arr[1]));
+    } else {
+        printf("%d %% %d = Operazione non valida (divisore zero)!\n", arr[0], arr[1]);
+    }
+    printf("%d ^ %d = %d\n", arr[1], arr[2], power(arr[1], arr[2]));
+
+    printf("\n");
 }
