@@ -3,7 +3,7 @@
 #include <ctype.h>
 #include "funzioni_stringa.h"
 
-// Funzione per contare le stringhe che iniziano con una vocale
+// contare le stringhe che iniziano con una vocale
 int conta_vocali_iniziali(char words[][20], int size) {
     int count = 0;
     char vowels[] = "aeiouAEIOU";
@@ -15,7 +15,7 @@ int conta_vocali_iniziali(char words[][20], int size) {
     return count;
 }
 
-// Funzione per contare le stringhe che contengono almeno un numero
+// Contare le stringhe che contengono almeno un numero
 int conta_stringhe_con_numero(char words[][20], int size) {
     int count = 0;
     for (int i = 0; i < size; i++) {
@@ -29,7 +29,7 @@ int conta_stringhe_con_numero(char words[][20], int size) {
     return count;
 }
 
-// Funzione per trovare la stringa più lunga
+// stringa più lunga
 char* stringa_piu_lunga(char words[][20], int size) {
     int max_length = 0;
     char* longest_word = words[0];
@@ -42,7 +42,7 @@ char* stringa_piu_lunga(char words[][20], int size) {
     return longest_word;
 }
 
-// Funzione per trovare la stringa più corta
+// stringa più corta
 char* stringa_piu_corta(char words[][20], int size) {
     int min_length = strlen(words[0]);
     char* shortest_word = words[0];
@@ -55,7 +55,7 @@ char* stringa_piu_corta(char words[][20], int size) {
     return shortest_word;
 }
 
-// Funzione per contare le stringhe palindrome
+// stringhe palindrome
 int conta_palindrome(char words[][20], int size) {
     int count = 0;
     for (int i = 0; i < size; i++) {
@@ -64,6 +64,7 @@ int conta_palindrome(char words[][20], int size) {
 
         // Controllo della parola per verificare se è un palindromo
         for (int j = 0; j < len / 2; j++) {
+            
             // Confronto tra lettere in minuscolo
             if (tolower(words[i][j]) != tolower(words[i][len - j - 1])) {
                 is_palindrome = 0;
@@ -77,7 +78,7 @@ int conta_palindrome(char words[][20], int size) {
     return count;
 }
 
-// Funzione per contare il numero totale di caratteri
+// contare il numero totale di caratteri
 int conta_caratteri_totali(char words[][20], int size) {
     int total = 0;
     for (int i = 0; i < size; i++) {
@@ -86,7 +87,7 @@ int conta_caratteri_totali(char words[][20], int size) {
     return total;
 }
 
-// Funzione per stampare le stringhe in ordine corretto
+// stampare le stringhe in ordine corretto
 void stampa_ordinale(char words[][20], int size) {
     for (int i = 0; i < size; i++) {
         printf("%s", words[i]);
@@ -95,7 +96,7 @@ void stampa_ordinale(char words[][20], int size) {
     printf("\n");
 }
 
-// Funzione per stampare le stringhe in ordine inverso
+// stampare le stringhe in ordine inverso
 void stampa_inverso(char words[][20], int size) {
     for (int i = size - 1; i >= 0; i--) {
         printf("%s", words[i]);
@@ -104,7 +105,7 @@ void stampa_inverso(char words[][20], int size) {
     printf("\n");
 }
 
-// Funzione per stampare le stringhe in ordine inverso con caratteri invertiti
+// stampare le stringhe in ordine inverso con caratteri invertiti
 void stampa_inverso_con_caratteri_invertiti(char words[][20], int size) {
     for (int i = size - 1; i >= 0; i--) {
         int len = strlen(words[i]);
